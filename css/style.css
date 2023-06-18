@@ -457,9 +457,6 @@ h6,
     z-index: -1;
 }
 
-.ceoProfile{
-   margin-bottom: 1000px !important;
-   }
 
 @media (max-width: 768px) {
    /* .ceoProfile{
