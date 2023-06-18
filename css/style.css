@@ -1,6 +1,6 @@
 /********** My CSS **********/
 
-@import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Epilogue:ital,wght@0,400;0,500;0,600;0,800;1,300&family=Gothic+A1:wght@200;300;400;500;600;700;800&family=Inter:wght@100;200;300;400;600&family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Balthazar&family=Epilogue:ital,wght@0,400;0,500;0,600;0,800;1,300&family=Gothic+A1:wght@200;300;400;500;600;700;800&family=Inter:wght@100;200;300;400;600&family=Karla:wght@200;300;400;500;600;700;800&display=swap'); */
 
 
 :root {
@@ -10,13 +10,20 @@
     --red: #F00607;
 }
 
+html{
+    scroll-behavior: smooth;
+   
+}
+
+
+
 h1,
 h2,
 .h1,
 .h2,
 .fw-bold {
     font-weight: 600 !important;
-  font-family: 'Balthazar', serif;
+  /* font-family: 'Balthazar', serif; */
     
 }
 
@@ -42,6 +49,73 @@ h6,
 .home{
     color: #252525 !important;
 }
+
+.call{
+    font-weight: 800;
+    
+}
+
+#more {display: none;}
+
+.readMore{
+    background-color: #FFFFFF;
+    border: 2px solid #F00607;
+    outline: none;
+    box-shadow: none;
+    transition: 0.9ms;
+}
+/* TESTING */
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  /* .newNav .closebtn{
+    position: absolute;
+    top: 1;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  } */
+
+
+.anchor-link{
+    scroll-margin: 12vh;
+}
+
+
 .appointment{
     background-color: #F00607;
     border: none;
@@ -165,7 +239,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--red);
 }
 
 .navbar.sticky-top {
@@ -181,6 +255,9 @@ h6,
 
     .navbar .navbar-nav {
         border-top: 1px solid #EEEEEE;
+    }
+    .sidenav{
+        display: block;
     }
 }
 
@@ -314,7 +391,8 @@ h6,
 }
 
 .ceo{
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 /*** Facts ***/
 .fact-item .fact-icon {
@@ -358,7 +436,7 @@ h6,
     position: absolute;
     /* width: 60%; */
     max-width: 100%;
-    height: 80%;
+    /* height: 80%; */
     object-fit: cover;
 }
 
@@ -372,13 +450,20 @@ h6,
     position: absolute;
     content: "";
     max-width: 100%;
-    height: 80%;
-    /* top: 10%; */
-    /* left: 20%; */
-    border: 5px solid var(--primary);
+    height: 100%;
+    top: 10%;
+    left: 20%;
+    /* border: 5px solid var(--primary); */
     z-index: -1;
 }
 
+
+@media (max-width: 768px) {
+   /* .ceoProfile{
+    width: 100%;
+    object-fit: cover;
+   } */
+}
 
 /*** Service ***/
 .service-item .bg-img {
